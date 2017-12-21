@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './components/first/first.component';
 import { CricketersComponent } from './components/cricketers/cricketers.component';
 import { BindingComponent } from './components/binding/binding.component';
+import { CricketersViewComponent } from './components/cricketers/cricketers-view/cricketers-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
     CricketersComponent,
-    BindingComponent
+    BindingComponent,
+    CricketersViewComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { cricketer } from '../first/first.component';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {cricketer} from '../first/first.component';
+import {CricketersViewComponent} from './cricketers-view/cricketers-view.component';
 
 @Component({
   selector: 'app-cricketers',
@@ -7,6 +8,9 @@ import { cricketer } from '../first/first.component';
   styleUrls: ['./cricketers.component.scss']
 })
 export class CricketersComponent implements OnInit {
+
+  @ViewChild('viewChildComponent') viewChildComponent: CricketersViewComponent;
+  activeCricketers: cricketer;
 
   cricketers: Array<cricketer> = [
     {
@@ -22,9 +26,19 @@ export class CricketersComponent implements OnInit {
       type: 'batsman'
     }
   ];
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
+  selectCricketer(x: cricketer) {
+    this.activeCricketers = x;
+  }
+
+  loadParentData(s) {
+    this.activeCricketers.name = s;
+    alert('load data ${s}');
+  }
 }

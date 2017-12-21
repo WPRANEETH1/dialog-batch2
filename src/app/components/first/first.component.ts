@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { AfterContentInit } from '@angular/core/src/metadata/lifecycle_hooks';
+import {Component, OnInit} from '@angular/core';
+import {AfterContentInit} from '@angular/core/src/metadata/lifecycle_hooks';
 
 declare var $: any;
+
 export interface cricketer {
   name: String;
   type: String;
@@ -29,7 +30,7 @@ export class FirstComponent implements OnInit, AfterContentInit {
 
 
   greet() {
-    alert("Hello from First Component!");
+    alert('Hello from First Component!');
   }
 
   tabChange(type) {
